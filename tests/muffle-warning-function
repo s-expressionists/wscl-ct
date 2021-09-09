@@ -1,0 +1,9 @@
+(ql:quickload :wscl-ct)
+
+(defun one ()
+  (restart-bind ((muffle-warning (lambda ())))
+    (muffle-warning)))
+
+(wscl-ct:record-eval
+  (one))
+
