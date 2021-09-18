@@ -3,10 +3,8 @@
   (:documentation "Compliance testing for WSCL")
   (:export
     #:*output-path*
-    #:record-eval))
-
+    #:record-eval
+    #:deftest))
 
 (defpackage #:wscl-ct/tests
-  (:documentation "Tests for WSCL")
-  (:export
-    #:stream-error-stream-type-error))
+  (:documentation "Tests for WSCL"))

@@ -2,7 +2,9 @@
 
 
 (defvar *output-path* (first (uiop:command-line-arguments)))
-
+(defvar *test-results* nil)
+(defvar +implementation-identifier+
+        (format nil "~A ~A" (uiop:implementation-type) (uiop:lisp-version-string)))
 
 (defmacro record-eval (&rest forms)
   (let ((form-var (gensym))

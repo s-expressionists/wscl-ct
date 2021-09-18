@@ -2,10 +2,10 @@
 
 rm $2
 abcl --batch --load $1 -- $2
-/usr/local/acl10.1express/alisp -L ~/quicklisp/setup.lisp -L $1 -e "(exit)" -- $2
-ccl -l $1 -e "(quit)" -- $2
+/usr/local/acl10.1express/alisp -batch -L ~/quicklisp/setup.lisp -L $1 -e "(exit)" -- $2
+ccl --batch -l $1 -e "(quit)" -- $2
 clasp --non-interactive --load $1 -- $2
 clisp -i $1 -x "(quit)" -- $2
-cmucl -load $1 -eval "(quit)" -- $2
+cmucl -batch -load $1 -eval "(quit)" -- $2
 ecl --load $1 --eval "(quit)" -- $2
 sbcl --non-interactive --load $1 $2
